@@ -3,3 +3,4 @@ AR = ar
 CFLAGS = -g -Wall
 
 all:
+	

@@ -17,9 +17,9 @@ void print_lines(char *str);
 void print_similar_words(char *str);
 
 int main(){
-    char *sptr1 = "aagabahj";
-    char *sptr2 = "aba";
-    printf("%d\n", substring(sptr1, sptr2));
+    if(){
+        
+    }
     return 0;
 }
 /*

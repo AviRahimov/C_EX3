@@ -33,7 +33,7 @@ int main(){
 */
 int mygetline(char s[]){
     int i = 0;
-    for (int i = 0; i < LINE; i++)
+    for (i = 0; i < LINE; i++)
     {
         if(scanf("%c", &s[i]) == EOF){
             s[i] = '\0';
@@ -53,7 +53,7 @@ int mygetline(char s[]){
 */
 int mygetword(char w[]){
     int i = 0;
-    for (int i = 0; i < WORD; i++)
+    for (i = 0; i < WORD; i++)
     {
         scanf("%c", &w[i]);
         if(w[i] == EOF){

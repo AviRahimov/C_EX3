@@ -1,10 +1,9 @@
 CC = gcc
-AR = ar
 CFLAGS = -g -Wall
 
-all:
+all: isort txtfind
 
 isort:
-
+	$(CC) $(CFLAGS) -o isort sort.c
 txtfind:
-	
+	$(CC) $(CFLAGS) -o txtfind str_search.c

@@ -18,7 +18,7 @@ int main(){
     {
         if (i == LENGTH-1)
         {
-            printf("%d", *(arr+i));
+            printf("%d\n", *(arr+i));
         }
         else{
             printf("%d,", *(arr+i));

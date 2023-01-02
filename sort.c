@@ -7,7 +7,7 @@ void shift_element(int *arr, int i);
 void insertion_sort(int *arr, int len);
 
 int main(){
-     int i;
+    int i;
     int arr[LENGTH];
     for (i = 0; i < LENGTH; i++)
     {

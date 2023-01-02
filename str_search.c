@@ -43,7 +43,8 @@ int mygetline(char s[]){
             break;
         }
     }
-    if(i == LINE){
+    if(i == LINE)
+    {
         s[i-1] = '\0';
     }
     return i;
@@ -55,8 +56,7 @@ int mygetword(char w[]){
     int i = 0;
     for (i = 0; i < WORD; i++)
     {
-        scanf("%c", &w[i]);
-        if(w[i] == EOF){
+        if(scanf("%c", &w[i]) == EOF){
             w[i] = '\0';
             break;
         }
@@ -80,15 +80,30 @@ int substring( char *str1, char *str2){
 
     while (str1[index1])
     {
-        if(str2[index2] == str1[index1]){
-            index1++;
-            index2++;
-        }
-        else if (str2[index2] == '\0')
+        if(str2[index2] == str1[index1])
         {
-            return 1;
+            while (str2[index2])
+            {
+                if(str2[index2] == str1[index1])
+                {
+                    index1++;
+                    index2++;
+                }
+                else
+                {
+                    index2 = 0;
+                    break;
+                }
+            }
+            if (str2[index2] == '\0')
+            {
+                return 1;
+            }
+            
+            
         }
-        else{
+        else
+        {
             index1++;
         }
     }
@@ -101,7 +116,12 @@ int similar (char *s, char *t, int n){
     int counter = 0;
     int indexS = 0;
     int indexT = 0;
-    
+    if(strlen(t) > strlen(s))
+    {
+        char *temp = t;
+        t = s;
+        s = temp;
+    }
     while(s[indexS]){
         if(s[indexS] == t[indexT]){
             indexS++;
@@ -123,13 +143,12 @@ int similar (char *s, char *t, int n){
 // this function print all the lines where`s the string we lokking for exist in them.
 void print_lines(char *str)
 {
-    char line[LINE];
+    char line[LINE] = {0};
     while (mygetline(line))
     {
         if (substring(line, str))
         {
-            //puts(line);
-            printf("%s\n", line);
+            printf("%s", line);
         }
     }
 }
@@ -139,10 +158,10 @@ void print_lines(char *str)
 // this function prints the words that similar to the string we looking for.
 void print_similar_words(char *str)
 {
-    char word[WORD];
+    char word[WORD] = {0};
     while (mygetword(word))
     {
-        if (similar(str, word, 1) || similar(str, word, 0))
+        if (similar(word, str, 1) || similar(word, str, 0))
         {
             printf("%s\n", word);
         }

@@ -31,7 +31,7 @@ and do one from 2 different things:
 the function return the number of chars which was actually absorbed.
 - *int getword(char w[])* --> same as getline but return the number of chars tht was absorb in a single word.
 - *int substring( char * str1, char * str2)* --> check if str2 contained str1. return 1 for yes and 0 for no.
-- *int similar (char *s, char *t, int n)* --> cheack if we can get string t from string s by omitting n chars.
+- *int similar(char *s, char *t, int n)* --> cheack if we can get string t from string s by omitting n chars.
 - *void print_lines(char * str)* --> print the lines which our string found in them.
 - *void print_similar_words(char * str)* --> print the words that similar to our string by omitting maximum one char from the words in the text.
 

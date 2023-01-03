@@ -1,3 +1,0 @@
-# ABOUT
-##Asדignment 3
-
